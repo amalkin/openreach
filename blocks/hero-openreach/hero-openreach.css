@@ -1,3 +1,9 @@
+/* Hero Openreach Block - matches openreach.com hero banner */
+
+.hero-openreach-container {
+  background-color: var(--dark-color);
+}
+
 .hero-openreach-container .hero-openreach-wrapper {
   max-width: unset;
   padding: 0;
@@ -5,33 +11,80 @@
 
 .hero-openreach {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.hero-openreach h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+.hero-openreach > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 .hero-openreach picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-openreach img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  display: block;
+}
+
+.hero-openreach > div:last-child {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.hero-openreach h1 {
+  color: #fff;
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 16px;
+  max-width: 500px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero-openreach p {
+  color: #fff;
+  font-size: var(--body-font-size-m);
+  margin: 0 0 24px;
+  max-width: 450px;
+}
+
+.hero-openreach a.button {
+  background-color: var(--link-color);
+  color: #fff;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  font-weight: 700;
+}
+
+.hero-openreach a.button:hover {
+  background-color: var(--link-hover-color);
 }
 
 @media (width >= 900px) {
   .hero-openreach {
-    padding: 40px 32px;
+    min-height: 500px;
+  }
+
+  .hero-openreach > div:last-child {
+    padding: 60px 32px;
+  }
+
+  .hero-openreach h1 {
+    font-size: 42px;
+    max-width: 600px;
   }
 }

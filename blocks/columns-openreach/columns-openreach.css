@@ -1,10 +1,9 @@
+/* Columns Openreach Block - matches openreach.com layout styles */
+
 .columns-openreach > div {
   display: flex;
   flex-direction: column;
-}
-
-.columns-openreach img {
-  width: 100%;
+  gap: 24px;
 }
 
 .columns-openreach > div > div {
@@ -15,19 +14,94 @@
   order: 0;
 }
 
-.columns-openreach > div > .columns-openreach-img-col img {
+.columns-openreach img {
+  width: 100%;
   display: block;
+  border-radius: 0;
+}
+
+/* Content column styling */
+.columns-openreach h2 {
+  font-size: var(--heading-font-size-xl);
+  font-weight: 500;
+  color: var(--text-color);
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.columns-openreach h3 {
+  font-size: var(--heading-font-size-l);
+  font-weight: 500;
+  color: var(--text-color);
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.columns-openreach p {
+  color: var(--text-color);
+  font-size: var(--body-font-size-s);
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.columns-openreach a {
+  color: var(--link-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.columns-openreach a:hover {
+  text-decoration: underline;
+}
+
+/* Stats variant (3 columns with numbers) */
+.section.dark-green .columns-openreach h2,
+.section.dark-green .columns-openreach h3,
+.section.dark-green .columns-openreach p,
+.section.teal .columns-openreach h2,
+.section.teal .columns-openreach h3,
+.section.teal .columns-openreach p {
+  color: #fff;
+}
+
+.section.dark-green .columns-openreach a,
+.section.teal .columns-openreach a {
+  color: #fff;
+}
+
+/* Large stat numbers */
+.columns-openreach strong {
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-color);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.section.dark-green .columns-openreach strong,
+.section.teal .columns-openreach strong {
+  color: #fff;
 }
 
 @media (width >= 900px) {
   .columns-openreach > div {
+    flex-direction: row;
     align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    gap: 48px;
   }
 
   .columns-openreach > div > div {
     flex: 1;
     order: unset;
+  }
+
+  /* Alternating layout - image right on even rows */
+  .columns-openreach > div:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .columns-openreach strong {
+    font-size: 64px;
   }
 }
