@@ -1,0 +1,93 @@
+{
+  "templates": [
+    {
+      "name": "openreach-homepage",
+      "urls": ["https://www.openreach.com/"],
+      "description": "Openreach homepage template with hero, promotional cards, feature sections, stats, and help cards",
+      "blocks": [
+        {
+          "name": "section-hero",
+          "section": true,
+          "selector": ".hero-banner-right, [class*='hero']",
+          "blocks": [
+            {
+              "name": "hero-openreach",
+              "selector": ".hero-banner-right, [class*='hero-banner']"
+            }
+          ]
+        },
+        {
+          "name": "section-trustpilot",
+          "section": true,
+          "selector": ".trustpilot-widget, [class*='trustpilot']",
+          "sectionMetadata": null,
+          "blocks": []
+        },
+        {
+          "name": "section-news",
+          "section": true,
+          "selector": "[class*='container'] .cmp-image + .text",
+          "blocks": [
+            {
+              "name": "columns-openreach",
+              "selector": ".container:has(img[alt*='20'])"
+            }
+          ]
+        },
+        {
+          "name": "section-promo-cards",
+          "section": true,
+          "selector": ".box-border-green, [class*='box-tappable']",
+          "blocks": [
+            {
+              "name": "cards-openreach",
+              "selector": ".box-border-green"
+            }
+          ]
+        },
+        {
+          "name": "section-who-we-are",
+          "section": true,
+          "selector": "[class*='container']:has([class*='hard-hat'], [class*='van-purple'])",
+          "sectionMetadata": {
+            "style": "grey"
+          },
+          "blocks": [
+            {
+              "name": "cards-openreach",
+              "selector": "[class*='container']:has(img[alt*='icon'], img[src*='line'])"
+            }
+          ]
+        },
+        {
+          "name": "section-stats",
+          "section": true,
+          "selector": ".box-background-teal, [class*='background-teal']",
+          "sectionMetadata": {
+            "style": "dark-green"
+          },
+          "blocks": [
+            {
+              "name": "columns-openreach",
+              "selector": "[class*='container']:has([class*='white'])"
+            }
+          ]
+        },
+        {
+          "name": "section-help",
+          "section": true,
+          "selector": "[class*='container']:has(img[alt*='chat'], img[alt*='flag'], img[alt*='building'])",
+          "sectionMetadata": {
+            "style": "highlight"
+          },
+          "blocks": [
+            {
+              "name": "cards-openreach",
+              "selector": ".box-border-green:has(img[src*='ic-'])"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

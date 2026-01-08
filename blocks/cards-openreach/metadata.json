@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-openreach",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-01-07T17:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.openreach.com/",
+    "originPage": "Openreach Homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "promotional-cards",
+    "imagePattern": "image-top"
+  },
+  "contentPattern": {
+    "structure": "image + heading + text + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional content cards",
+      "feature highlights with images",
+      "service/product listings",
+      "team or about sections"
+    ],
+    "notSuitableFor": [
+      "icon-only cards without images",
+      "simple text lists"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-07T17:30:00.000Z"
+  }
+}

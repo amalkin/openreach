@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-openreach",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-01-07T17:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.openreach.com/",
+    "originPage": "Openreach Homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "homepage-hero",
+    "imagePattern": "large-background"
+  },
+  "contentPattern": {
+    "structure": "heading + form + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero sections",
+      "landing pages with prominent headings",
+      "pages with background images and CTAs"
+    ],
+    "notSuitableFor": [
+      "minimal text-only headers",
+      "interior pages without hero imagery"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-07T17:30:00.000Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-openreach",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-01-07T17:30:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.openreach.com/",
+    "originPage": "Openreach Homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "mixed",
+    "density": "spacious",
+    "purpose": "side-by-side-content",
+    "imagePattern": "image-text"
+  },
+  "contentPattern": {
+    "structure": "image + text content OR stat columns",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "news card layouts with image and text",
+      "stat displays with icons",
+      "side-by-side promotional content",
+      "feature comparisons"
+    ],
+    "notSuitableFor": [
+      "single column content",
+      "full-width layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-07T17:30:00.000Z"
+  }
+}
