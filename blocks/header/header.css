@@ -1,9 +1,10 @@
-/* header and nav layout */
+/* header and nav layout - Openreach style */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: var(--dark-color);
   width: 100%;
   z-index: 2;
   position: fixed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header nav {
@@ -19,6 +20,7 @@ header nav {
   height: var(--nav-height);
   padding: 0 24px;
   font-family: var(--body-font-family);
+  color: #fff;
 }
 
 header nav[aria-expanded='true'] {
@@ -28,6 +30,7 @@ header nav[aria-expanded='true'] {
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100dvh;
+  background-color: var(--dark-color);
 }
 
 @media (width >= 900px) {
@@ -55,7 +58,13 @@ header nav p {
 }
 
 header nav a:any-link {
-  color: currentcolor;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+header nav a:hover {
+  color: var(--link-color);
 }
 
 /* hamburger */
@@ -72,8 +81,8 @@ header nav .nav-hamburger button {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background-color: var(--background-color);
-  color: inherit;
+  background-color: transparent;
+  color: #fff;
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
@@ -142,15 +151,20 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
+  flex-basis: 140px;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
 }
 
+header nav .nav-brand a {
+  display: block;
+}
+
 header nav .nav-brand img {
-  width: 128px;
+  width: 140px;
   height: auto;
+  display: block;
 }
 
 /* sections */
@@ -245,8 +259,9 @@ header nav .nav-sections ul > li > ul > li {
     width: 200px;
     top: 150%;
     padding: 16px;
-    background-color: var(--light-color);
+    background-color: var(--dark-color);
     white-space: initial;
+    border-radius: 4px;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
@@ -258,7 +273,7 @@ header nav .nav-sections ul > li > ul > li {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
+    border-bottom: 8px solid var(--dark-color);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
@@ -269,4 +284,22 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+header nav .nav-tools ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: var(--body-font-size-xs);
+}
+
+header nav .nav-tools a {
+  opacity: 0.8;
+}
+
+header nav .nav-tools a:hover {
+  opacity: 1;
+  color: var(--link-color);
 }
